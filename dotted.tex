@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{background}
+
+\def\Step{1cm}
+\tikzset{dotted lines/.style={black, loosely dotted,  thick}}
+\backgroundsetup{
+scale=1,
+angle=0,
+position={current page.north west},
+contents={
+\begin{tikzpicture}[remember picture,overlay]
+\draw[dotted lines,step=\Step,help lines]
+  (current page.south west) grid  (current page.north east);
+  \end{tikzpicture}
+  }
+}
+\begin{document}
+
+\mbox{}
+\clearpage
+\mbox
+
+\end{document}
